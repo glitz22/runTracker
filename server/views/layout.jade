@@ -1,0 +1,20 @@
+doctype html
+html(ng-app='runTrackerApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    ul
+      li
+        a(href='#/') Home
+      li
+        a(href='#/runList') Runs
+      li
+        a(href='#/paceGoals') Pace Goals
+      li
+        a(href='#/distanceGoals') Distance Goals
+    div(ng-view)
+    block content
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-route.min.js')
+    script(src='/angular/runTracker.min.js')

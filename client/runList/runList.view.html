@@ -1,0 +1,6 @@
+<navigation></navigation>
+<page-header content="vm.pageHeader"></page-header>
+<ul ng-show="vm.runList" ng-repeat="run in vm.runList">
+	<li><a href="#/runs/{{run._id}}">{{run.title}}</a></li>
+</ul>
+<page-footer></page-footer>

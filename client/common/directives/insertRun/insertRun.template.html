@@ -1,0 +1,8 @@
+<p>{{vm.formError}}</p>
+<form name="insertRun" ng-submit="vm.onSubmit()">
+	<label>Miles: </label><input name="miles" ng-model="vm.formData.miles" type="text"/>
+	<label>Minutes: </label><input name="minutes" ng-model="vm.formData.minutes" type="text"/>
+	<label>Seconds: </label><input name="seconds" ng-model="vm.formData.seconds" type="text"/>
+	<label>Notes: </label><input name="notes" ng-model="vm.formData.notes" type="text"/>
+	<input type="submit" name="submitRun" value="Submit Run!"/>
+</form>
