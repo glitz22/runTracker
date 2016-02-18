@@ -16,4 +16,4 @@ mongoose.connection.on('disconnected', function() {
 require("./run");
 require("./distanceGoal");
 require("./paceGoal");
-require("/.users");
+require("./users");
