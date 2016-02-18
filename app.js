@@ -6,10 +6,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-require('./api/models/db');
-
 var uglifyJs = require("uglify-js");
 var fs = require("fs");
+var passport = require('passport');
+
+require('./api/models/db');
+require('./api/config/passport');
 
 var routes = require('./server/routes/index');
 var routesApi = require('./api/routes/index');
@@ -51,6 +53,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'client')));
 
+app.use(passport.initialize());
 //app.use('/', routes);
 app.use('/api', routesApi);
 
