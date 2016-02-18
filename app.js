@@ -28,6 +28,7 @@ var appClientFiles = [
   "client/runList/runList.controller.js",
   "client/runs/run.controller.js",
   "client/common/services/runTrackerData.service.js",
+  "client/common/services/authentication.service.js",
   "client/common/directives/pageHeader/pageHeader.directive.js",
   "client/common/directives/pageFooter/pageFooter.directive.js",
   "client/common/directives/navigation/navigation.directive.js",
