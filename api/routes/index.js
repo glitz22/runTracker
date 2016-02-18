@@ -1,5 +1,9 @@
 var express = require("express");
 var router = express.Router();
+var jwt = require("express-jwt");
+var auth = jwt({
+	secret : process.env.JWT_SECRET
+});
 
 var runCtrl = require("../controllers/runs");
 var authCtrl = require("../controllers/authentication");
@@ -9,9 +13,9 @@ var authCtrl = require("../controllers/authentication");
 //runs
 router.get("/runList", runCtrl.listAll);
 router.get("/runs/:runid", runCtrl.getById);
-router.post("/runs", runCtrl.create);
-router.put("/runs/:runid", runCtrl.updateRun);
-router.delete("/runs/:runid", runCtrl.deleteRun);
+router.post("/runs", auth, runCtrl.create);
+router.put("/runs/:runid", auth, runCtrl.updateRun);
+router.delete("/runs/:runid", auth, runCtrl.deleteRun);
 
 //paceGoals
 /*
