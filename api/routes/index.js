@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 var runCtrl = require("../controllers/runs");
+var authCtrl = require("../controllers/authentication");
 //var paceGoalCtrl = require("../controllers/paceGoals");
 //var distanceGoalCtrl = require("../controllers/distanceGoals");
 
@@ -29,4 +30,8 @@ router.post("distanceGoals/", distanceGoalCtrl.create);
 router.put("distanceGoals/:distancegoaltitle", distanceGoalCtrl.updateDistanceGoal);
 router.delete("distanceGoals/distancegoaltitle", distanceGoalCtrl.deleteDistanceGoal);
 */
+
+router.post("/register",authCtrl.register);
+router.post("/login",authCtrl.login);
+
 module.exports = router;
