@@ -4,3 +4,5 @@ node_modules
 npm-debug.log
 # Environment variables
 .env
+# sass-cache
+.sass-cache
