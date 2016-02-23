@@ -24,3 +24,30 @@ ul.navigation > li > a {
 	color: #4c0000;
 	line-height: 36px;
 }
+
+/* insert run form */
+
+form.insert-run {
+	width : 60%;
+	margin: 10px auto;
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+form.insert-run > .form-group {
+	margin : 10px auto;
+}
+
+form.insert-run > .form-group > label {
+	position : absolute;
+	height : 16px;
+	vertical-align : middle;
+	text-align: center;
+}
+
+form.insert-run > .form-group > input {
+	width : 80%;
+	margin : 2px auto;
+	height : 36px;
+	border-radius : 5px;
+}
